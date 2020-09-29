@@ -358,7 +358,7 @@ bool CVirtualMachineTestApp::IsVirtualMachine()
 	{
 		CString serviceName(s.ServiceName.c_str());
 		serviceName.MakeLower();
-		if (serviceName == "vboxservice")
+		if (serviceName == "vboxservice" || serviceName == "vpcmap" || serviceName == "vmsrvc" || serviceName == "vmusrvc")
 		{
 			isVm = true;
 			break;
@@ -414,7 +414,8 @@ bool CVirtualMachineTestApp::IsVirtualMachine()
 		}
 		if ((model_upper.Find(L"VBOX") != -1)		// VIRTUALBOX
 			|| (model_upper.Find(L"VMWARE") != -1)	// VMWARE
-			|| (model_upper.Find(L"VIRTUAL") != -1)) // HyperV
+			|| (model_upper.Find(L"VIRTUAL") != -1)
+			|| (model_upper.Find(L"QEMU") != -1)) // HyperV
 		{
 			isVm = true;
 		}
