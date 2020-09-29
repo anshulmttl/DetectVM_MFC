@@ -1,0 +1,29 @@
+// VirtualMachineTest.idl : type library source for VirtualMachineTest.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (VirtualMachineTest.tlb).
+
+[ uuid(0c517984-922c-416b-972b-410d0e53c463), version(1.0) ]
+library VirtualMachineTest
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CVirtualMachineTestDoc
+
+	[ uuid(d8fbc4b6-06a4-4717-96d3-3a27ac79ddd3) ]
+	dispinterface IVirtualMachineTest
+	{
+		properties:
+
+		methods:
+	};
+
+	//  Class information for CVirtualMachineTestDoc
+
+	[ uuid(0e45ba69-9d9a-4b1c-82f5-6546d9a153fe) ]
+	coclass VirtualMachineTest
+	{
+		[default] dispinterface IVirtualMachineTest;
+	};
+};
